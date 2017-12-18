@@ -1,0 +1,43 @@
+{
+  "name": "t3h-ui",
+  "version": "0.0.1",
+  "description": "Personal boilerplate library for React-based UIs",
+  "main": "components/index.js",
+  "files": [
+    "server",
+    "components"
+  ],
+  "scripts": {
+    "prepublishOnly": "gulp",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csauve/t3h-ui.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "boilerplate",
+    "server",
+    "isomorphic"
+  ],
+  "author": "csauve <connorsauve@gmail.com> (http://t3hz0r.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csauve/t3h-ui/issues"
+  },
+  "homepage": "https://github.com/csauve/t3h-ui#readme",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-babel": "^7.0.0"
+  }
+}
