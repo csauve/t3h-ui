@@ -1,5 +1,5 @@
 # t3h-ui (WIP)
-A library of UI components and server rendering boilerplate. It is intended to be bundled into other projects as a build dependency. It tends to assume universal rendering and a page component per Express route.
+A React-based UI component and server rendering library. The library also includes an SCSS library. The project's distributables are meant to be bundled into other projects as a build dependency.
 
 ## Usage
 The function `renderToNodeStream` from `t3h-ui/server` will render the given component into an HTML stream, piping it into the response:
@@ -8,7 +8,7 @@ Todo: usage is WIP
 
 ```jsx
 import {isomorphic, PageContent} from "t3h-ui";
-import {renderToNodeStream} from "t3h-ui/server";
+import {renderPageStream} from "t3h-ui/server";
 
 const HomePage = isomorphic(({name}) => (
   <PageContent>
