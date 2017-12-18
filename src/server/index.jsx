@@ -1,6 +1,7 @@
 import ReactDOMServer from "react-dom/server";
 import React from "react";
 import Html from "./Html";
+import serialize from "serialize-javascript";
 
 //todo
 const isomorphic = function(Component) {

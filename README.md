@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 ```
 
 ## Building & releasing
-The gulp build is responsible for copying SCSS and building CJS modules. It's run during the NPM `prepublishOnly` phase, or with `npm run build`.
+The gulp build is responsible for copying SCSS and building CJS modules. It's run during the NPM `prepublishOnly` phase, or with `npx gulp`.
 
 Todo: publishing script example:
 

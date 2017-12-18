@@ -8,8 +8,7 @@
     "components"
   ],
   "scripts": {
-    "prepublishOnly": "gulp",
-    "build": "gulp"
+    "prepublishOnly": "gulp"
   },
   "repository": {
     "type": "git",
@@ -39,5 +38,8 @@
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^7.0.0"
+  },
+  "dependencies": {
+    "serialize-javascript": "^1.4.0"
   }
 }
