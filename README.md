@@ -40,3 +40,6 @@ git tag --annotate v0.6.1 --message 'Version 0.6.1'
 git push --atomic origin refs/heads/master refs/tags/v0.6.1
 env VERSION=0.6.1 PREVIOUS_VERSION=0.6.0 bash -c 'npm publish'
 ```
+
+## Future work
+* CSRF protection lib
