@@ -2,13 +2,14 @@
   "name": "t3h-ui",
   "version": "0.0.1",
   "description": "Personal boilerplate library for React-based UIs",
-  "main": "components/index.js",
+  "main": "lib/components.js",
   "files": [
-    "server",
-    "components"
+    "lib",
+    "t3h-assets"
   ],
   "scripts": {
-    "prepublishOnly": "gulp"
+    "prepublishOnly": "gulp",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -21,25 +22,31 @@
     "server",
     "isomorphic"
   ],
-  "author": "csauve <connorsauve@gmail.com> (http://t3hz0r.com)",
+  "author": "csauve <contact@t3hz0r.com> (https://t3hz0r.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/csauve/t3h-ui/issues"
   },
   "homepage": "https://github.com/csauve/t3h-ui#readme",
-  "peerDependencies": {
+  "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
-  "devDependencies": {
+    "react-dom": "^16.3.2",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.3",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-babel": "^7.0.0"
-  },
-  "dependencies": {
-    "serialize-javascript": "^1.4.0"
+    "babelify": "^8.0.0",
+    "envify": "^4.1.0",
+    "gulp-bro": "^1.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "normalize.css": "^8.0.0",
+    "gulp-uglify": "^3.0.0"
   }
 }
