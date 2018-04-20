@@ -8,8 +8,7 @@
     "t3h-assets"
   ],
   "scripts": {
-    "prepublishOnly": "gulp",
-    "build": "gulp"
+    "postinstall": "gulp"
   },
   "repository": {
     "type": "git",
