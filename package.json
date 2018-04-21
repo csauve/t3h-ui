@@ -4,8 +4,7 @@
   "description": "Personal boilerplate library for React-based UIs",
   "main": "lib/components.js",
   "files": [
-    "lib",
-    "t3h-assets"
+    "lib"
   ],
   "scripts": {
     "postinstall": "gulp"

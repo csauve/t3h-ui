@@ -12,7 +12,7 @@ const paths = {
   scripts: ["./src/**/*.jsx", "./src/**/*.js"],
   styles: ["./src/**/*.css", "./src/**/*.scss"],
   libDist: "./lib",
-  assetDist: "./t3h-assets"
+  assetDist: "./lib/t3h-assets"
 };
 
 const clean = () =>
