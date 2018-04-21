@@ -7,7 +7,7 @@
     "lib"
   ],
   "scripts": {
-    "postinstall": "gulp"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -33,18 +33,20 @@
     "gulp": "^4.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.3",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0",
     "envify": "^4.1.0",
     "gulp-bro": "^1.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
-    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
-    "normalize.css": "^8.0.0",
     "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "normalize.css": "^8.0.0",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
   }
 }
