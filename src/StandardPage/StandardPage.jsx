@@ -1,14 +1,14 @@
 import React from "react";
-import HtmlDoc from "../HtmlDoc/HtmlDoc.jsx";
+import HtmlDoc from "../HtmlDoc/HtmlDoc";
 
 const StandardPage = ({doc, headerTitle, navContent, children}) => {
   const docProps = {
     title: "t3hz0r",
-    favicon: "/favicon.png",
+    favicon: "/t3h-assets/favicon.png",
     ...doc,
     styles: [
-      "/normalize.css",
-      "/source-sans-pro/source-sans-pro.css",
+      "/t3h-assets/normalize.css",
+      "/t3h-assets/source-sans-pro/source-sans-pro.css",
       ...doc.styles
     ],
   };

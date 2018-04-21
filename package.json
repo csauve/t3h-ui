@@ -7,6 +7,9 @@
     "lib",
     "t3h-assets"
   ],
+  "scripts": {
+    "postinstall": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/csauve/t3h-ui.git"
@@ -25,22 +28,24 @@
   },
   "homepage": "https://github.com/csauve/t3h-ui#readme",
   "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.3.2",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.3",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0",
-    "del": "^3.0.0",
     "envify": "^4.1.0",
-    "gulp": "^4.0.0",
     "gulp-bro": "^1.0.3",
-    "gulp-clean-css": "^3.9.3",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
-    "gulp-uglify": "^3.0.0",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
     "normalize.css": "^8.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.3.2",
-    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release"
+    "gulp-uglify": "^3.0.0"
   }
 }
