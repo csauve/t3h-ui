@@ -7,7 +7,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "release": "npm pack . && aws s3 cp t3h-ui-*.tgz s3://csauve-npm-packages/"
   },
   "repository": {
     "type": "git",
