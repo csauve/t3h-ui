@@ -5,10 +5,6 @@
 
   a {
     &:visited {
-      border-bottom: 0.15em solid rgba($fg-accent-primary, 0.25);
-    }
-
-    &:visited:hover {
       color: $fg-accent-primary;
     }
   }

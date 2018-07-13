@@ -16,34 +16,32 @@ body {
 }
 
 a {
+  color: $fg-accent-primary;
   text-decoration: none;
-  color: $fg-content;
-  transition: border-bottom-width $transition-time;
 
   &:link {
-    border-bottom: 0.15em solid rgba($fg-accent-primary, $faded-opacity);
+    color: $fg-accent-primary;
   }
 
   &:visited {
-    border-bottom: 0.15em solid rgba($fg-accent-secondary, $faded-opacity);
-  }
-
-  &:hover {
-    border-bottom-width: 0.35em;
-  }
-
-  &:visited:hover {
     color: $fg-accent-secondary;
   }
 
-  &:link:hover {
-    color: $fg-accent-primary;
+  &:hover {
+    text-decoration: underline;
   }
+}
+
+//link protocol styling:
+a[href^="mailto:"]:after {
+  content: "📧";
+  vertical-align: super;
+  font-size: 50%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: $fg-header;
-  font-weight: 500;
+  font-weight: $font-weight-header;
 }
 
 //steps of 0.5/3
