@@ -1,6 +1,6 @@
 import React from "react";
 
-const HtmlDoc = ({title, children, styles, scripts, favicon}) => (
+const HtmlDoc = ({title, children, styles, scripts, favicon, feedUrl}) => (
   <html lang="en">
     <head>
       <meta charSet="UTF-8"/>
@@ -10,6 +10,7 @@ const HtmlDoc = ({title, children, styles, scripts, favicon}) => (
         src && <link key={src} rel="stylesheet" href={src}/>
       )}
       {favicon && <link rel="icon" type="image/png" href={favicon}/>}
+      {feedUrl && <link rel="alternate" type="application/rss+xml" href={feedUrl}/>}
       {title && <title>{title}</title>}
     </head>
     <body>
