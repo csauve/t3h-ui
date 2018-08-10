@@ -1,6 +1,6 @@
 {
   "name": "t3h-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Personal boilerplate library for React-based UIs",
   "main": "lib/components.js",
   "files": [
