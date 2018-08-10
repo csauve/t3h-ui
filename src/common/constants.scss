@@ -1,3 +1,5 @@
+@import "./source-sans-pro.scss";
+
 $padding-std: 8px !default;
 $bg-content: #FFF !default;
 $fg-content: #303030 !default;
@@ -20,6 +22,3 @@ $font-family-std: "Source Sans Pro", sans-serif !default;
 $font-family-code: Menlo, Consolas, Monaco, monospace !default;
 $small-screen-width: 550px !default;
 $max-reading-content-width: 700px !default;
-
-@import "./HtmlDoc/HtmlDoc.scss";
-@import "./StandardPage/StandardPage.scss";

@@ -4,11 +4,11 @@ import HtmlDoc from "../HtmlDoc/HtmlDoc";
 const StandardPage = ({doc, headerTitle, navContent, children}) => {
   const docProps = {
     title: "t3hz0r",
-    favicon: "/t3h-assets/favicon.png",
+    favicon: "/t3h-assets/common/favicon.png",
     ...doc,
     styles: [
-      "/t3h-assets/normalize.css",
-      "/t3h-assets/source-sans-pro/source-sans-pro.css",
+      "/t3h-assets/normalize.css/normalize.css",
+      "/t3h-assets/common/common-bundle.css",
       ...doc.styles
     ],
   };

@@ -25,9 +25,10 @@ const buildStyles = (src, dest) => () =>
   .pipe(gulp.dest(dest));
 
 //build distributable script bundles
-const buildScripts = (src, dest) => () =>
+const buildScripts = (src, dest, opts) => () =>
   gulp.src(src)
   .pipe(bro({
+    ...opts,
     extensions: [".js", ".jsx"],
     transform: [
       babelify,

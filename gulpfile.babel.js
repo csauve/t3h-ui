@@ -1,34 +1,45 @@
-const del = require("del");
-const gulp = require("gulp");
-const babel = require("gulp-babel");
+import gulp from "gulp";
+import babel from "gulp-babel";
+import {buildStyles, buildScripts, buildClean, buildCopy} from "./src/utils/gulp-helpers.js";
 
+const vendorLibs = ["react", "react-dom"];
 const paths = {
-  assets: [
-    "./src/t3h-assets/**/*",
-    "./node_modules/normalize.css/normalize.css",
+  copiedAssets: [
+    "./src/**/*.+(jpg|png)",
+    "./node_modules/+(normalize.css)/normalize.css",
     "./node_modules/+(source-sans-pro)/source-sans-pro.css",
-    "./node_modules/+(source-sans-pro)/**/*.+(woff|woff2|otf|ttf|eot)",
+    "./node_modules/+(source-sans-pro)/**/*.+(woff|woff2|otf|ttf|eot)"
   ],
-  scripts: ["./src/**/*.jsx", "./src/**/*.js"],
-  styles: ["./src/**/*.css", "./src/**/*.scss"],
+  commonScriptsAssets: ["./src/+(common)/common-bundle.js"],
+  otherScriptsAssets: ["./src/!(common)/*-bundle.js"],
+  stylesAssets: ["./src/**/*-bundle.scss"],
+  scriptsLib: ["./src/**/*.js", "./src/**/*.jsx"],
+  stylesLib: ["./src/**/*.css", "./src/**/*.scss"],
   libDist: "./lib",
-  assetDist: "./lib/t3h-assets"
+  assetDist: "./t3h-assets"
 };
 
-const clean = () =>
-  del([paths.libDist, paths.assetDist]);
-
-const styles = () =>
-  gulp.src(paths.styles)
-  .pipe(gulp.dest(paths.libDist));
-
-const scripts = () =>
-  gulp.src(paths.scripts)
+gulp.task("clean", buildClean([paths.libDist, paths.assetDist]));
+gulp.task("commonScriptsAssets", buildScripts(paths.commonScriptsAssets, paths.assetDist, {
+  require: vendorLibs,
+}));
+gulp.task("otherScriptsAssets", buildScripts(paths.otherScriptsAssets, paths.assetDist, {
+  external: vendorLibs
+}));
+gulp.task("stylesAssets", buildStyles(paths.stylesAssets, paths.assetDist));
+gulp.task("copiedAssets", buildCopy(paths.copiedAssets, paths.assetDist));
+gulp.task("stylesLib", buildCopy(paths.stylesLib, paths.libDist));
+gulp.task("scriptsLib", () =>
+  gulp.src(paths.scriptsLib)
   .pipe(babel())
-  .pipe(gulp.dest(paths.libDist));
+  .pipe(gulp.dest(paths.libDist))
+);
 
-const assets = () =>
-  gulp.src(paths.assets)
-  .pipe(gulp.dest(paths.assetDist));
-
-gulp.task("default", gulp.series(clean, gulp.parallel(scripts, styles, assets)));
+gulp.task("default", gulp.series("clean", gulp.parallel(
+  "commonScriptsAssets",
+  "otherScriptsAssets",
+  "stylesAssets",
+  "copiedAssets",
+  "stylesLib",
+  "scriptsLib",
+)));
