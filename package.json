@@ -45,12 +45,12 @@
     "three": "^0.91.0"
   },
   "devDependencies": {
-    "normalize.css": "^8.0.0",
-    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "normalize.css": "^8.0.0",
+    "source-sans-pro": "git://github.com/adobe-fonts/source-sans-pro.git#release"
   }
 }

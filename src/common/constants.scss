@@ -2,7 +2,8 @@
 
 $padding-std: 8px !default;
 $bg-content: #FFF !default;
-$fg-content: #303030 !default;
+$fg-content: #444 !default;
+$fg-header: #222 !default;
 $fg-minor: #848484 !default;
 $bg-nav: #eee !default;
 $panel-border-color: #d5d5d5 !default;
@@ -14,11 +15,10 @@ $line-height-code: 1.2em !default;
 $font-size-std: 20px !default;
 $font-size-small: 18px !default;
 $font-size-code: 0.85em !default;
-$font-weight-header: 600 !default;
+$font-weight-header: normal !default;
 $bg-inset: #eee !default;
 $transition-time: 0.1s !default;
-$fg-header: $fg-content !default;
-$font-family-std: "Source Sans Pro", sans-serif !default;
+$font-family-std: "Helvetica Neue", "Helvetica", sans-serif !default;
 $font-family-code: Menlo, Consolas, Monaco, monospace !default;
 $small-screen-width: 550px !default;
-$max-reading-content-width: 700px !default;
+$max-reading-content-width: 40em !default;

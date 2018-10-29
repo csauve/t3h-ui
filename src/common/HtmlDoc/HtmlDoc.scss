@@ -42,15 +42,18 @@ a[href^="mailto:"]:after {
 h1, h2, h3, h4, h5, h6 {
   color: $fg-header;
   font-weight: $font-weight-header;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  text-rendering: optimizelegibility;
 }
 
 //steps of 0.5/3
-h1 {font-size: 1.50em;}
-h2 {font-size: 1.33em;}
-h3 {font-size: 1.17em;}
-h4 {font-size: 1.00em;}
-h5 {font-size: 0.83em;}
-h6 {font-size: 0.67em;}
+h1 {font-size: 2.00em;}
+h2 {font-size: 1.50em;}
+h3 {font-size: 1.33em;}
+h4 {font-size: 1.17em;}
+h5 {font-size: 1.00em;}
+h6 {font-size: 0.83em;}
 
 img, video, iframe, canvas {
   max-width: 100%;
