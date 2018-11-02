@@ -1,7 +1,7 @@
 import React from "react";
 import HtmlDoc from "../HtmlDoc/HtmlDoc";
 
-const StandardPage = ({doc, headerTitle, navContent, children}) => {
+const StandardPage = ({doc, headerTitle, navContent, children, mainHeader}) => {
   const docProps = {
     title: "t3hz0r",
     favicon: "/t3h-assets/common/favicon.png",
@@ -15,15 +15,22 @@ const StandardPage = ({doc, headerTitle, navContent, children}) => {
 
   return (
     <HtmlDoc {...docProps}>
-      <header className="site-header">
-        {headerTitle &&
-          <div id="header-title">{headerTitle}</div>
-        }
-        {navContent &&
-          <nav id="header-nav">{navContent}</nav>
-        }
-      </header>
-      <main>
+      <nav className="site-navigation">
+        <div className="nav-elements">
+          {headerTitle &&
+            <div id="nav-title">{headerTitle}</div>
+          }
+          {navContent &&
+            <div id="nav-links">{navContent}</div>
+          }
+        </div>
+      </nav>
+      {mainHeader &&
+        <header className="main-header">
+          {mainHeader}
+        </header>
+      }
+      <main className="main-content">
         {children}
       </main>
     </HtmlDoc>

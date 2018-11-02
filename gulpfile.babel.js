@@ -6,9 +6,7 @@ const vendorLibs = ["react", "react-dom"];
 const paths = {
   copiedAssets: [
     "./src/**/*.+(jpg|png)",
-    "./node_modules/+(normalize.css)/normalize.css",
-    "./node_modules/+(source-sans-pro)/source-sans-pro.css",
-    "./node_modules/+(source-sans-pro)/**/*.+(woff|woff2|otf|ttf|eot)"
+    "./node_modules/+(normalize.css)/normalize.css"
   ],
   commonScriptsAssets: ["./src/+(common)/common-bundle.js"],
   otherScriptsAssets: ["./src/!(common)/*-bundle.js"],

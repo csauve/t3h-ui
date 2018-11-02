@@ -8,11 +8,17 @@ body, html {
 }
 
 body {
-  background: $bg-content;
+  background: $bg-page;
   color: $fg-content;
   line-height: $line-height-std;
   font-size: $font-size-std;
   font-family: $font-family-std;
+}
+
+@media (max-width: $small-screen-width) {
+  body {
+    font-size: $font-size-small;
+  }
 }
 
 a {
