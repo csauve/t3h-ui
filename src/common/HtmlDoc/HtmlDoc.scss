@@ -81,7 +81,7 @@ pre {
   padding: 1em;
   line-height: $line-height-code;
   border-left: 3px solid $panel-border-color;
-  overflow-x: scroll;
+  overflow-x: auto;
   code {
     padding: 0;
   }
